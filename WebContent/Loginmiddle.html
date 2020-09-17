@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+
+.div02 {
+	background-color: #F5F5F5;
+	width: 800px;
+	height: 500px;
+	border: solid 5px #808080;
+	position: absolute;
+	top: 150px;
+	left: 350px;
+	color:#000000;
+	
+}
+</style>
+
+<!--点换一张时   验证码刷新 -->
+<script>
+     
+     
+     window.onload = function(){
+    	 document.getElementById("checkCode").onclick = function(){
+    		 
+    		 this.src = "/javae/checkCode?time"+new Date().gettime();
+    	 }
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+     }
+     
+
+</script>
+
+
+
+
+</head>
+<body>
+<div class="div02">
+
+					<form id="lichengze" action=" " style="margin-left:35%;">
+						<span><font size="5" color=##FF0000><em>注册页面</em></font></span><br/>
+						用户名:<br/>
+						<input type="text" placeholder="请输入用户名"/> <br/>
+						密码:<br/><input type="password" placeholder="请输入密码"/> <br/>
+						确认密码:<br/>
+						<input type="password" placeholder="请确认密码"/> <br/>
+						 手机号码:<br/>
+						<input type="number" placeholder="请输入手机号"/> <br/>
+						 籍贯:<br/>
+						<select>
+							<option>请选择</option>
+							<option>河北</option>
+							<option>秦皇岛</option>
+							<option>北京</option>
+							<option>廊坊</option>
+							<option>保定</option>
+							<option>石家庄</option>
+							<option>邢台</option>
+							<option>邯郸</option>
+						</select> <br />
+						 出生日期:</br> 
+						 <input type="datetime-local" /></br>
+						验证码:</br>
+						<input type="text" placeholder="请输入验证码"/>
+						<img id="checkCode" src = "/javae/checkCode"/>
+						<a id="change" href>看不清换一张？</a><br/>
+						
+						
+						
+						<input type="submit" value="注册"  style="width:60px"/>
+
+						<input type="submit" value="提交"  style="width:60px"/>
+					</form>
+				
+				   
+				   
+
+				</div>
+
+</body>
+</html>
